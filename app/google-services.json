@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "854314274536",
+    "project_id": "agriculture-59ed0",
+    "storage_bucket": "agriculture-59ed0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854314274536:android:c1b1793cd0fe1f5628035d",
+        "android_client_info": {
+          "package_name": "com.example.internshipapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "854314274536-1mjr1tb858osllbj4qofi0fp6r7mr717.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.internshipapp",
+            "certificate_hash": "229c0061e702830f5f4b2e92e4f382d3730fee22"
+          }
+        },
+        {
+          "client_id": "854314274536-f2rd5t42a979n1jv67mog5mimadn6d36.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7DCR2A6m9TH_Ait09ky6_4gWI2T_qofU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "854314274536-f2rd5t42a979n1jv67mog5mimadn6d36.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854314274536:android:75437b1e2d19716328035d",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "854314274536-f2rd5t42a979n1jv67mog5mimadn6d36.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7DCR2A6m9TH_Ait09ky6_4gWI2T_qofU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "854314274536-f2rd5t42a979n1jv67mog5mimadn6d36.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
