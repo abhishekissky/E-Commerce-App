@@ -361,7 +361,6 @@
             android:visibility="visible" />
 
 
-
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
@@ -389,7 +388,7 @@
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <TextView
@@ -416,17 +415,13 @@
 
                     <Button
                         android:id="@+id/button"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
                         android:layout_marginStart="45dp"
                         android:layout_marginLeft="45dp"
                         android:layout_marginEnd="10dp"
                         android:layout_marginRight="10dp"
                         android:padding="1dp"
-                        android:paddingLeft="1dp"
-                        android:paddingTop="1dp"
-                        android:paddingRight="1dp"
-                        android:paddingBottom="1dp"
                         android:text="@string/buttonTextview"
                         android:textSize="10sp" />
 
@@ -443,8 +438,8 @@
                         android:layout_height="match_parent"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
                         app:cardElevation="8dp">
 
                         <LinearLayout
@@ -575,7 +570,7 @@
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <TextView
@@ -585,7 +580,7 @@
                             android:layout_marginStart="15dp"
                             android:layout_marginLeft="15dp"
                             android:text="Trending Products"
-                            android:textColor="#313435"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="20sp" />
 
                         <TextView
@@ -603,16 +598,12 @@
                     <Button
                         android:id="@+id/button2"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="40dp"
                         android:layout_marginStart="135dp"
                         android:layout_marginLeft="135dp"
                         android:layout_marginEnd="10dp"
                         android:layout_marginRight="10dp"
                         android:padding="1dp"
-                        android:paddingLeft="1dp"
-                        android:paddingTop="1dp"
-                        android:paddingRight="1dp"
-                        android:paddingBottom="1dp"
                         android:text="@string/buttonTextview"
                         android:textSize="10sp" />
 
