@@ -6,9 +6,11 @@
     tools:context=".fragments.WishListFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="WishList" />
+        android:id="@+id/wish_list_recycleView" />
+
 
 </FrameLayout>
