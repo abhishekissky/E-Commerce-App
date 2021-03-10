@@ -1,6 +1,7 @@
 package com.example.myapplication.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +11,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.Activities.ProductViewActivity;
 import com.example.myapplication.Models.WishListModel;
 import com.example.myapplication.R;
+import com.example.myapplication.fragments.WishListFragment;
 
 import java.util.List;
 
@@ -38,6 +41,14 @@ public class WishListAdapter extends RecyclerView.Adapter<WishListAdapter.ViewHo
         holder.ProductNameTv.setText(list.get(position).getProduct_name());
         holder.product_mrp_digit.setText(list.get(position).getProduct_mrp_digit());
         holder.productIv.setImageResource(list.get(position).getProduct_image());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ProductViewActivity.class);
+                context.startActivity(intent);
+
+            }
+        });
     }
 
     @Override

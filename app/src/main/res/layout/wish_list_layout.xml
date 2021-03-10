@@ -45,7 +45,7 @@
                 android:text="Commodity Name"
                 android:textColor="#000000"
                 android:textSize="20dp"
-                android:fontFamily="monospace"/>
+                />
 
 
             <TextView
@@ -114,7 +114,7 @@
                     android:gravity="center"
                     android:textColor="@color/white"
                     android:layout_below="@+id/save_rupee"
-                    android:background="@drawable/oval_background"
+                    android:background="@drawable/green_oval_background"
                     android:layout_toRightOf="@id/save_rupee"
                     android:text="+"
                     android:textSize="20dp" />
@@ -137,7 +137,7 @@
                     android:gravity="center"
                     android:textColor="@color/white"
                     android:layout_below="@+id/save_rupee"
-                    android:background="@drawable/oval_background"
+                    android:background="@drawable/green_oval_background"
                     android:text="-"/>
             </LinearLayout>
         </RelativeLayout>

@@ -9,7 +9,7 @@
             android:icon="@drawable/ic_baseline_category_24" />
         <item android:id="@+id/whishList"
             android:title="Wish List"
-            android:icon="@drawable/ic_baseline_control_point_24" />
+            android:icon="@drawable/icons_heart_white" />
     <item android:id="@+id/order"
         android:title="Order"
         android:icon="@drawable/ic_baseline_shopping_cart_24" />
