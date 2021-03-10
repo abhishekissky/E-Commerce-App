@@ -31,4 +31,16 @@
     <string name="readyfood">Ready to eat food</string>
     <string name="buttonTextview">View All</string>
     <string name="apple">Apples</string>
+
+    <!--Used in DeliveryFragment -->
+    <string name="promocode">Have a Promo Code?</string>
+    <string name="hintpromo">Promo Code</string>
+    <string name="orderSummary">Order Summary</string>
+    <string name="productname">Product Name</string>
+    <string name="quantity">Qty</string>
+    <string name="price">Price</string>
+    <string name="Subtotal">Subtotal</string>
+    <string name="orderDetail">Brown Sheesham Wood and Brass Tissue Box</string>
+
+
 </resources>

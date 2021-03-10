@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
     DrawerLayout drawerLayout;
     TextView userLoginRegister;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
