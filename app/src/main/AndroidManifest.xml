@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ECommApp">
+        <activity android:name=".Activities.ProductViewActivity"></activity>
         <activity android:name=".Activities.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,13 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.SignUpActivity" />
-        <activity android:name=".Activities.LoginActivity">
-
-
-        </activity>
-        <activity android:name=".Activities.MainActivity">
-
-        </activity>
+        <activity android:name=".Activities.LoginActivity"></activity>
+        <activity android:name=".Activities.MainActivity"></activity>
     </application>
 
 </manifest>
