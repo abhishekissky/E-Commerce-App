@@ -15,7 +15,8 @@
         app:cardElevation="5dp"
         app:cardMaxElevation="8dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintStart_toStartOf="@+id/guideline6">
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -393,7 +394,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         app:cardCornerRadius="5dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
@@ -421,13 +422,14 @@
             <RadioGroup
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:id="@+id/getWayRadioGroup"
                 android:layout_marginTop="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView38">
 
                 <RadioButton
-                    android:id="@+id/radioButton9"
+                    android:id="@+id/codRBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/ic_cash_on_delivery"
@@ -437,13 +439,40 @@
                     android:textSize="18dp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton8"
+                    android:id="@+id/PayURBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/ic_payu"
                     android:drawablePadding="15dp"
                     android:paddingLeft="25dp"
                     android:text="By PayU"
+                    android:textSize="18sp" />
+                <RadioButton
+                    android:id="@+id/PaytmRBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_payu"
+                    android:drawablePadding="15dp"
+                    android:paddingLeft="25dp"
+                    android:text="By Paytm"
+                    android:textSize="18sp" />
+                <RadioButton
+                    android:id="@+id/GPayRBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_payu"
+                    android:drawablePadding="15dp"
+                    android:paddingLeft="25dp"
+                    android:text="By GPay"
+                    android:textSize="18sp" />
+                <RadioButton
+                    android:id="@+id/razorPayRBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_payu"
+                    android:drawablePadding="15dp"
+                    android:paddingLeft="25dp"
+                    android:text="By RazorPay"
                     android:textSize="18sp" />
             </RadioGroup>
 
@@ -476,18 +505,27 @@
                 android:src="@drawable/ic_exclamation" />
 
             <TextView
-                android:id="@+id/textView31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Total:₹"
+                android:textColor="#393838"
+                android:textSize="26sp" />
+
+            <TextView
+                android:id="@+id/totalAmount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="3"
-                android:text="Total:₹150.00"
+                android:text="150.00"
                 android:textColor="#393838"
                 android:textSize="26sp" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/continueBtn"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"

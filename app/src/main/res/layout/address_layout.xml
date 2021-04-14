@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addressRadio"
+        android:layout_gravity="center" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/customerName"
+                    android:layout_width="@dimen/dimen_93dp"
+                    android:layout_height="wrap_content"
+                    android:text="Abhishek Dwivedi "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView6"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/home"
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/top_textbackground"
+                    android:padding="5dp"
+                    android:text="Home"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginRight="@dimen/dimen_20dp"
+
+                >
+                <ImageView
+                    android:id="@+id/edit"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/ic_pencil" />
+
+                <ImageView
+                    android:id="@+id/delete"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:gravity="right"
+                    android:src="@drawable/ic_delete"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                    app:layout_constraintStart_toEndOf="@+id/imageView7"
+                    app:layout_constraintTop_toTopOf="@+id/imageView7" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/customerAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Lower Nehrugram, Dehradun, Uttarakhan"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/customerName"
+            app:layout_constraintTop_toBottomOf="@+id/customerName" />
+
+
+        <TextView
+            android:id="@+id/mobileNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="9935207354"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="@+id/addressLayout"
+            app:layout_constraintTop_toBottomOf="@+id/addressLayout" />
+
+    </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+

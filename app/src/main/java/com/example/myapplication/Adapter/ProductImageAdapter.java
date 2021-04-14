@@ -8,26 +8,28 @@ import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 
+import com.bumptech.glide.Glide;
 import com.example.myapplication.R;
 
+import java.util.List;
 
-public class ProductViewViewPagerAdapter extends PagerAdapter {
+
+public class ProductImageAdapter extends PagerAdapter {
 
     int[] defaultImages;
     Context context;
+    List<String >imageUrl;
 
-    public ProductViewViewPagerAdapter(int[] defaultImages, Context context) {
+    public ProductImageAdapter(int[] defaultImages, Context context, List<String >imageUrl) {
         this.defaultImages = defaultImages;
         this.context = context;
+        this.imageUrl=imageUrl;
     }
 
     @Override
     public int getCount() {
-
-
-        return defaultImages.length;
+        return imageUrl.size();
     }
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
@@ -45,7 +47,9 @@ public class ProductViewViewPagerAdapter extends PagerAdapter {
         View imageLayout = LayoutInflater.from(context).inflate(R.layout.sliding_image_layout, container, false);
         assert imageLayout != null;
         final ImageView imageView = (ImageView) imageLayout.findViewById(R.id.imageView);
-        imageView.setImageResource(defaultImages[position]);
+
+        Glide.with(context).load(imageUrl.get(position)).into(imageView);
+//        imageView.setImageResource(defaultImages[position]);
         container.addView(imageLayout, 0);
         return imageLayout;
     }

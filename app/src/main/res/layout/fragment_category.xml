@@ -15,7 +15,7 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="200dp"
             android:layout_height="200dp"
-
+            android:id="@+id/grain"
             android:layout_margin="5dp">
 
             <LinearLayout
@@ -44,6 +44,7 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="200dp"
             android:layout_height="200dp"
+            android:id="@+id/bakery"
             android:layout_margin="5dp"
             >
 
@@ -73,6 +74,7 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="200dp"
             android:layout_height="200dp"
+            android:id="@+id/fruits"
             android:layout_margin="5dp"
             >
 
@@ -102,6 +104,7 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="200dp"
             android:layout_height="200dp"
+            android:id="@+id/beverage"
             android:layout_margin="5dp"
             >
 
@@ -130,6 +133,7 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="200dp"
             android:layout_height="200dp"
+            android:id="@+id/snakes"
             android:layout_margin="5dp"
             >
 
@@ -159,6 +163,7 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_margin="5dp"
+            android:id="@+id/vegetable"
             >
 
             <LinearLayout

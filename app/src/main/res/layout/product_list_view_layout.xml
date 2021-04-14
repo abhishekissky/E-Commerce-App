@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="5dp"
+    android:paddingBottom="20dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/productIv"
+                android:layout_width="80dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="5dp"
+                android:background="#ffffff"
+                android:foregroundGravity=""
+                android:src="@drawable/products" />
+
+            <TextView
+                android:id="@+id/ProductNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/productIv"
+                android:layout_toRightOf="@id/productIv"
+                android:text="Commodity Name"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                />
+            <TextView
+                android:id="@+id/ProductQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ProductNameTv"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/productIv"
+                android:maxLines="1"
+                android:text="1"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/ProductUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ProductNameTv"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/ProductQty"
+                android:maxLines="1"
+                android:text="Kg"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/product_mrpTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/productIv"
+                android:layout_below="@+id/ProductQty"
+                android:layout_marginLeft="20dp"
+                android:text="MRP:"/>
+
+            <TextView
+                android:id="@+id/rupee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ProductQty"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/product_mrpTxt"
+                android:text="₹" />
+            <TextView
+                android:id="@+id/product_mrp_digit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ProductQty"
+                android:layout_toRightOf="@id/rupee"
+                android:text="40" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Offer Price:₹"
+                android:id="@+id/offerTxt"
+                android:layout_below="@+id/product_mrpTxt"
+                android:layout_toRightOf="@id/productIv"
+                android:layout_marginLeft="20dp"
+                android:textColor="#006400"
+                android:textSize="25dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20"
+                android:id="@+id/offer_price"
+                android:layout_below="@+id/product_mrpTxt"
+                android:layout_toRightOf="@id/offerTxt"
+                android:textColor="#006400"
+                android:textSize="25dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/offer_price"
+                android:paddingBottom="10dp"
+                android:layout_toRightOf="@id/productIv"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="You Save"
+                    android:textColor="#F60505"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/saveRupee"
+                    android:layout_below="@+id/offer_price"
+                    android:layout_toRightOf="@id/productIv"
+                    android:text=" ₹ "
+                    android:textColor="#F60505"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/saveRupeeDigit"
+                    android:layout_below="@+id/offer_price"
+                    android:layout_toRightOf="@id/productIv"
+                    android:text="20.0"
+                    android:textColor="#F60505"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/saveRupeePercentLayout"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/offer_price"
+                        android:layout_toRightOf="@id/saveRupee"
+                        android:text="("
+                        android:textColor="#F60505"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/offer_price"
+                        android:layout_toRightOf="@id/saveRupee"
+                        android:id="@+id/saveRupeePercent"
+                        android:text="50"
+                        android:textColor="#F60505"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/offer_price"
+                        android:layout_toRightOf="@id/saveRupee"
+                        android:text="%"
+                        android:textColor="#F60505"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/offer_price"
+                        android:layout_toRightOf="@id/saveRupee"
+                        android:text=")"
+                        android:textColor="#F60505"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

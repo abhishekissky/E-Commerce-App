@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".Activities.ProductViewActivity">
 
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,6 +65,32 @@
             android:textStyle="bold"
             android:textColor="@android:color/black"
             android:layout_marginLeft="20dp" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/ProductQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 "
+                android:fontFamily="sans-serif-smallcaps"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="20dp" />
+            <TextView
+                android:id="@+id/ProductUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kg"
+                android:layout_toRightOf="@+id/ProductQty"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                />
+        </RelativeLayout>
+
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -81,7 +109,7 @@
                 android:text="₹"
                 android:textSize="20dp"/>
             <TextView
-                android:id="@+id/product_mrpTxt"
+                android:id="@+id/product_mrp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="100"
@@ -115,17 +143,53 @@
             <TextView
                 android:id="@+id/productPrice"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
-                android:text="50"
                 android:layout_marginLeft="5dp"
-                android:textSize="20dp"
-                android:textColor="#F60101"/>\
+                android:text="50"
+                android:textColor="#F60101"
+                android:textSize="20dp" />
+
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="(₹54.00/kg)"
+                android:text="("
+                android:layout_marginLeft="5dp"
+                android:textSize="20dp"
+                android:textColor="#F60101"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹"
+                android:layout_marginLeft="5dp"
+                android:textSize="20dp"
+                android:textColor="#F60101"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="54.00"
+                android:id="@+id/productPricePerUnit"
+                android:textSize="20dp"
+                android:textColor="#F60101"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textSize="20dp"
+                android:textColor="#F60101"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/priceUnit"
+                android:text="kg"
+                android:textSize="20dp"
+                android:textColor="#F60101"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=")"
                 android:layout_marginLeft="5dp"
                 android:textSize="20dp"
                 android:textColor="#F60101"/>
@@ -155,6 +219,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#F60101"
+                android:id="@+id/discountPrice"
                 android:layout_marginLeft="5dp"
                 android:textSize="20dp"
                 android:text="5.00"/>
@@ -164,12 +229,32 @@
                 android:textColor="#F60101"
                 android:textSize="20dp"
                 android:layout_marginLeft="5dp"
-                android:text="(2%)"/>
+                android:text="("/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/discountPercentage"
+                android:textColor="#F60101"
+                android:textSize="20dp"
+                android:text="2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#F60101"
+                android:textSize="20dp"
+                android:text="%"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#F60101"
+                android:textSize="20dp"
+                android:text=")"/>
 
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/InclusiveAllTax"
             android:text="Inclusive all Tax"
             android:layout_marginLeft="20dp"
             android:textColor="@color/colorPrimaryDark"
@@ -189,6 +274,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
+                android:id="@+id/sellerName"
                 android:textSize="20dp"
                 android:text="Seller"
                 android:textColor="@color/black"/>
@@ -227,7 +313,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/product_qty"
+                    android:id="@+id/product_qty_i_D"
                     android:textSize="20dp"
                     android:layout_marginLeft="20dp"
                     android:text="1"/>
@@ -235,6 +321,7 @@
                 <TextView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:id="@+id/product_qty_de"
                     android:textSize="20dp"
                     android:layout_marginLeft="20dp"
                     android:gravity="center"
@@ -282,10 +369,16 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:text="Delivery Service"
+            android:text="Dispatch Service"
             android:textSize="22dp"
             android:textStyle="bold"
             android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dispatchIn"
+            android:layout_marginLeft="20dp"
+            android:text="Dummy"/>
         <LinearLayout
             android:layout_marginTop="30dp"
             android:layout_marginBottom="20dp"
@@ -294,7 +387,7 @@
             android:gravity="center"
             android:orientation="horizontal">
             <Button
-                android:id="@+id/Delete"
+                android:id="@+id/wishList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -306,7 +399,7 @@
                 android:textSize="16dp"
                 android:textAllCaps="false"/>
             <Button
-                android:id="@+id/Edit"
+                android:id="@+id/add_to_cardBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -320,3 +413,15 @@
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center|bottom"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

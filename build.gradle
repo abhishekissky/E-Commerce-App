@@ -17,6 +17,20 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven {
+            url "https://artifactory.paytm.in/libs-release-local"
+        }
+        mavenCentral()
+        maven {
+            url 'https://api.mapbox.com/downloads/v2/releases/maven'
+            authentication {
+                basic(BasicAuthentication)
+            }
+            credentials {
+                username = "mapbox"
+                password = "INSERT_MAPBOX_ACCESS_TOKEN_HERE"
+            }
+        }
     }
 }
 

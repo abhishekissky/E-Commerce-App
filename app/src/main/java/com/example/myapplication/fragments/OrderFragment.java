@@ -1,66 +1,78 @@
 package com.example.myapplication.fragments;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.myapplication.R;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link OrderFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.example.myapplication.Adapter.OrderListAdapter;
+import com.example.myapplication.Models.OrderListModel;
+import com.example.myapplication.databinding.FragmentOrderBinding;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class OrderFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    FragmentOrderBinding binding;
+    FirebaseFirestore firebaseFirestore;
+    FirebaseUser firebaseUser;
+    OrderListAdapter orderListAdapter;
+    List<OrderListModel>orderListModels;
 
     public OrderFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment OrderFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static OrderFragment newInstance(String param1, String param2) {
-        OrderFragment fragment = new OrderFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_order, container, false);
+        binding = FragmentOrderBinding.inflate(inflater,container,false);
+        View view =binding.getRoot();
+        orderListModels = new ArrayList<>();
+        firebaseFirestore = FirebaseFirestore.getInstance();
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (firebaseUser!=null) {
+            getOrderData();
+        }
+
+        return view;
+    }
+
+    private void getOrderData() {
+
+        firebaseFirestore.collection("Customer")
+                .document(firebaseUser.getUid())
+                .collection("orderList")
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        if (!queryDocumentSnapshots.isEmpty()) {
+                            for (QueryDocumentSnapshot allProduct : queryDocumentSnapshots) {
+                                OrderListModel orderListModel = allProduct.toObject(OrderListModel.class);
+                                orderListModels.add(orderListModel);
+                                Log.v("pr", orderListModel.toString());
+                            }
+
+                            orderListAdapter = new OrderListAdapter(getContext(), orderListModels);
+                            binding.recyclerView.setHasFixedSize(true);
+                            binding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                            binding.recyclerView.setAdapter(orderListAdapter);
+                        }
+                    }
+                });
     }
 }

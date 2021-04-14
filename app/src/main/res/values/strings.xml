@@ -43,4 +43,16 @@
     <string name="orderDetail">Brown Sheesham Wood and Brass Tissue Box</string>
 
 
+    <string name="merchantID">5708075</string>
+    <string name="merchantKey">FdDo1kq6</string>
+    <string name="merchantSalt">z9aBCu7KqG</string>
+    <string name="sUrl">https://test.payumoney.com/mobileapp/payumoney/success.php</string>
+    <string name="fUrl">https://test.payumoney.com/mobileapp/payumoney/failure.php</string>
+
+    <string name="facebook_app_id">251525493342210</string>
+    <string name="fb_login_protocol_scheme">fb251525493342210</string>
+
+    <string name="mapbox_access_token">sk.eyJ1IjoiYXJ5YW4tYmlzaHQiLCJhIjoiY2ttb2xsd2E4MGd6bTJwcnY2ZXI3aXAxdyJ9.BSTpHVujwNmutf0kCR8Sqg</string>
+
+
 </resources>
